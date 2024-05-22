@@ -32,6 +32,10 @@
         <li><a href="#contact">Contact Me</a></li>
       </ul>
       <div class="bx bx-menu" id="menu-icon"></div>
+      <select class="language" id="language">
+        <option value="idn">Indonesia</option>
+        <option value="eng">English</option>
+      </select>
     </header>
 
     <!-- home section design -->
@@ -193,15 +197,10 @@
       </div>
 
       <div class="contact-form">
-        <form id="form">
+        <form action="" method="post">
           <input type="name" id="name" placeholder="Name" required />
-          <input type="email" id="email_id" placeholder="Email" required />
-          <input
-            type="phone"
-            id="phone_id"
-            placeholder="Mobile Number"
-            required
-          />
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="phone" id="phone" placeholder="Mobile Number" required />
           <textarea
             name="message"
             id="message"
@@ -212,10 +211,9 @@
           ></textarea>
           <input
             type="submit"
-            id="button"
             value="Send Message"
             class="submit"
-            required
+            onclick="sendMail()"
           />
         </form>
       </div>
@@ -232,13 +230,18 @@
     </section>
 
     <!-- js link -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script type="text/javascript">
-      emailjs.init("krQL2-8FjibTAPSPS");
+      (function () {
+        emailjs.init({
+          publicKey: "krQL2-8FjibTAPSPS",
+        });
+      })();
     </script>
-    <script>
-      type = "text/javascript";
-      src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
-    </script>
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
   </body>
