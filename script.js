@@ -26,59 +26,15 @@ var typed = new Typed("#auto-typed", {
   loop: true,
 });
 
-function sendMail() {
-  var params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("emai").value,
-    phone: document.getElementById("phone").value,
-    message: document.getElementById("message").value,
-  };
-  const serviceID = "service_f8ncqps";
-  const templateID = "template_n8ke14r";
-
-  emailjs.sendForm(serviceID, templateID, params).then((res) => {
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("phone").value = "";
-    document.getElementById("message").value = "";
-    console.log(res);
-    alert("Message Sent");
-  });
-}
-// .catch((err)=> console.log(err));
-//send email function
-// const btn = document.getElementById("#button");
-
-// document.getElementById("#form").addEventListener(".submit", function (event) {
-//   event.preventDefault();
-
-//   btn.value = "Sending...";
-
-//   const serviceID = "service_f8ncqps";
-//   const templateID = "template_n8ke14r";
-
-//   emailjs.sendForm(serviceID, templateID, this).then(
-//     () => {
-//       btn.value = "Send Message";
-//       alert("Sent!");
-//     },
-//     (err) => {
-//       btn.value = "Send Message";
-//       alert(JSON.stringify(err));
-//     }
-//   );
-// });
-
-// function sendMail() {
-//   var params = {
-//     from_name: document.getElementById("Name").value,
-//     email_id: document.getElementById("email").value,
-//     phone_id: document.getElementById("phone").value,
+// function sendMail(params) {
+//   var tempParams = {
+//     user_name: document.getElementById("user_name").value,
+//     user_email: document.getElementById("user_email").value,
 //     message: document.getElementById("message").value,
 //   };
 //   emailjs
-//     .send("service_f8ncqps", "template_c83h1hs", params)
+//     .send("gmail", "template_7uwleso", "service_yy9lu87", tempParams)
 //     .then(function (res) {
-//       alert("Success Send!" + res.status);
+//       console.log("succes", res.status);
 //     });
 // }

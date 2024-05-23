@@ -32,12 +32,12 @@
         <li><a href="#contact">Contact Me</a></li>
       </ul>
       <div class="bx bx-menu" id="menu-icon"></div>
-      <select class="language" id="language">
-        <option value="idn">Indonesia</option>
-        <option value="eng">English</option>
+
+      <select id="pilih" class="language">
+        <option value="">Indonesia</option>
+        <option value="">English</option>
       </select>
     </header>
-
     <!-- home section design -->
     <section class="home" id="home">
       <div class="home-text">
@@ -183,11 +183,20 @@
       <div class="contact-text">
         <h2>Contact<span> Me</span></h2>
         <h4>My Address</h4>
-        <p>Tanjung pura 4 RT.04 RW.05 Pegadungan Kalideres Jakarta Barat</p>
+        <p>
+          <i class="bx bx-current-location"></i> Tanjung pura 4 RT.04 RW.05
+          Pegadungan Kalideres Jakarta Barat
+        </p>
         <div class="list">
-          <li><a href="https://wa.me/6282290090036">082290090036</a></li>
           <li>
-            <a href="mailto:donnyfauzi55@gmail.com">donnyfauzi55@gmail.com</a>
+            <a href="https://wa.me/6282290090036"
+              ><i class="bx bx-phone"></i> 082290090036</a
+            >
+          </li>
+          <li>
+            <a href="mailto:donnyfauzi55@gmail.com"
+              ><i class="bx bx-mail-send"></i> donnyfauzi55@gmail.com</a
+            >
           </li>
         </div>
         <div class="contact-icon">
@@ -197,26 +206,43 @@
       </div>
 
       <div class="contact-form">
-        <form action="" method="post">
-          <input type="name" id="name" placeholder="Name" required />
-          <input type="email" id="email" placeholder="Email" required />
-          <input type="phone" id="phone" placeholder="Mobile Number" required />
+        <form id="contact-form">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input
+            type="phone"
+            name="phone"
+            placeholder="Mobile Number"
+            required
+          />
           <textarea
             name="message"
-            id="message"
             cols="35"
             rows="10"
             placeholder="How Can I Help"
             required
           ></textarea>
-          <input
-            type="submit"
-            value="Send Message"
-            class="submit"
-            onclick="sendMail()"
-          />
+          <input type="submit" value="Send Message" class="submit" />
         </form>
       </div>
+
+      <!-- <div class="contact-form">
+        <form id="contact-form">
+          <input type="hidden" id="contact_number" value="697483" />
+          <label>Name</label>
+          <input type="text" id="user_name" />
+          <label>Email</label>
+          <input type="email" id="user_email" />
+          <label>Message</label>
+          <textarea id="message"></textarea>
+          <input
+            onclick="sendMail()"
+            type="submit"
+            value="Send"
+            class="submit"
+          />
+        </form>
+      </div> -->
     </section>
 
     <!-- end/footer section -->
@@ -237,7 +263,7 @@
     <script type="text/javascript">
       (function () {
         emailjs.init({
-          publicKey: "krQL2-8FjibTAPSPS",
+          publicKey: "rb1uPr5VbbfwXxB2K",
         });
       })();
     </script>

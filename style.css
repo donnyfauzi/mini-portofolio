@@ -80,7 +80,6 @@ span {
   background-color: var(--bg-color);
   color: var(--text-color);
   border-radius: 10px;
-  border-color: var(--bg-color);
 }
 
 .section {
