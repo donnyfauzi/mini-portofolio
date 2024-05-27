@@ -26,15 +26,16 @@ var typed = new Typed("#auto-typed", {
   loop: true,
 });
 
-// function sendMail(params) {
-//   var tempParams = {
-//     user_name: document.getElementById("user_name").value,
-//     user_email: document.getElementById("user_email").value,
-//     message: document.getElementById("message").value,
-//   };
-//   emailjs
-//     .send("gmail", "template_7uwleso", "service_yy9lu87", tempParams)
-//     .then(function (res) {
-//       console.log("succes", res.status);
-//     });
-// }
+function sendMail() {
+  var Params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    message: document.getElementById("message").value,
+  };
+  emailjs
+    .send("service_yy9lu87", "template_7uwleso", Params)
+    .then(function (res) {
+      alert("Message Sent", res.email);
+    });
+}
